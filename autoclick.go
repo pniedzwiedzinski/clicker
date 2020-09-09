@@ -9,14 +9,14 @@ import (
 
 func moveAndClickStepOne() {
 	fmt.Println("Moving Mouse")
-	robotgo.MoveMouseSmooth(166, 775, 1.0, 7.0)
+	//robotgo.MoveMouseSmooth(166, 775, 1.0, 7.0)
 	fmt.Println("Clicking")
 	robotgo.Click()
 }
 
 func moveAndClickStepTwo() {
 	fmt.Println("Moving Mouse")
-	robotgo.MoveMouseSmooth(268, 112, 1.0, 7.0)
+	//robotgo.MoveMouseSmooth(268, 112, 1.0, 7.0)
 	fmt.Println("Clicking")
 	robotgo.Click()
 }
@@ -27,17 +27,13 @@ func delay() {
 }
 
 func main() {
-	count := 0
-	iterations := 4
-
-	for count <= iterations {
+	for true {
 		fmt.Println("Starting iteration")
 		moveAndClickStepOne()
 		delay()
 		moveAndClickStepTwo()
 		delay()
 		fmt.Println("finising iteration")
-		count++
 	}
 	fmt.Println("finished all iterations")
 }
